@@ -4,7 +4,7 @@
 
 ![SyncGifts Banner](https://img.shields.io/badge/SyncGifts-AI%20Gift%20Assistant-blueviolet?style=for-the-badge&logo=sparkles)
 [![Live Demo](https://img.shields.io/badge/🌍%20Live%20Demo-syncgift.vercel.app-violet?style=for-the-badge)](https://syncgift.vercel.app)
-[![Backend API](https://img.shields.io/badge/⚙️%20Backend%20API-syncgift.onrender.com-green?style=for-the-badge)](https://syncgift.onrender.com/api/health)
+[![Backend API](https://img.shields.io/badge/⚙️%20Backend%20API-syncgift--1.onrender.com-green?style=for-the-badge)](https://syncgift-1.onrender.com/api/health)
 
 </div>
 
@@ -15,7 +15,7 @@
 | Service | URL |
 |:---|:---|
 | 🌍 **Frontend Website** | **[https://syncgift.vercel.app](https://syncgift.vercel.app)** |
-| ⚙️ **Backend API** | **[https://syncgift.onrender.com](https://syncgift.onrender.com/api/health)** |
+| ⚙️ **Backend API** | **[https://syncgift-1.onrender.com](https://syncgift-1.onrender.com/api/health)** |
 | 📦 **GitHub Repo** | **[github.com/srichandanapallakonda229-sketch/SYNCGIFT](https://github.com/srichandanapallakonda229-sketch/SYNCGIFT)** |
 
 ---
