@@ -1417,7 +1417,7 @@ const shopInfoSchema = new mongoose.Schema({
 let User, Product, Order, ShopInfo;
 
 async function connect() {
-  const uri = process.env.MONGODB_URI;
+  const uri = process.env.MONGODB_URI || 'mongodb+srv://srichandanapallakonda229_db_user:Sri%402008@cluster0.5pgdfml.mongodb.net/syncgifts?retryWrites=true&w=majority&appName=Cluster0';
   if (!uri) {
     console.log("No MONGODB_URI found. Defaulting to local JSON file-based database.");
     isMock = true;
