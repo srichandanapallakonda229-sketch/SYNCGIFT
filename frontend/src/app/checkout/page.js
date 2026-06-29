@@ -32,7 +32,7 @@ function CheckoutContent() {
 
   // Single product checkout details
   const [product, setProduct] = useState(null);
-  const [productLoading, setProductLoading] = useState(false);
+  const [productLoading, setProductLoading] = useState(!!productId);
   const [quantity, setQuantity] = useState(1);
 
   // Form Fields State
@@ -55,7 +55,6 @@ function CheckoutContent() {
   // Load single product details if direct checkout
   useEffect(() => {
     if (productId) {
-      setProductLoading(true);
       api.get(`/products/${productId}`)
         .then(data => {
           setProduct(data);
@@ -71,7 +70,7 @@ function CheckoutContent() {
   // Sync recipient name once user is logged in
   useEffect(() => {
     if (user && !recipientName) {
-      setRecipientName(user.name);
+      Promise.resolve().then(() => setRecipientName(user.name));
     }
   }, [user, recipientName]);
 

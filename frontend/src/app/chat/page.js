@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import api from '../../utils/api';
@@ -42,7 +42,7 @@ export default function ChatAssistant() {
   
   // Voice Input state
   const [isListening, setIsListening] = useState(false);
-  const [recognition, setRecognition] = useState(null);
+  const recognitionRef = useRef(null);
   const [selectedLang, setSelectedLang] = useState('en-IN');
 
   // Context settings (collapsible)
@@ -55,7 +55,7 @@ export default function ChatAssistant() {
   const [interests, setInterests] = useState('');
 
   // Text-To-Speech description player
-  const speakText = (text) => {
+  const speakText = useCallback((text) => {
     if (typeof window !== 'undefined' && window.speechSynthesis) {
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(text);
@@ -64,10 +64,10 @@ export default function ChatAssistant() {
       else utterance.lang = 'en-IN';
       window.speechSynthesis.speak(utterance);
     }
-  };
+  }, [selectedLang]);
 
   // Voice commands parser
-  const handleVoiceCommand = async (text) => {
+  const handleVoiceCommand = useCallback(async (text) => {
     const query = text.toLowerCase().trim();
     
     // Command 1: Speak description / Read description
@@ -147,7 +147,7 @@ export default function ChatAssistant() {
       }
       return;
     }
-  };
+  }, [router, speakText]);
 
   // Recommended products store (fetched from backend IDs)
   const [productDetailsMap, setProductDetailsMap] = useState({});
@@ -210,22 +210,22 @@ export default function ChatAssistant() {
           setIsListening(false);
         };
 
-        Promise.resolve().then(() => setRecognition(rec));
+        recognitionRef.current = rec;
       }
     }
-  }, [selectedLang]);
+  }, [selectedLang, handleVoiceCommand]);
 
   const toggleVoiceInput = () => {
-    if (!recognition) {
+    if (!recognitionRef.current) {
       alert("Speech recognition is not supported in this browser. Please use Google Chrome or Safari.");
       return;
     }
 
     if (isListening) {
-      recognition.stop();
+      recognitionRef.current.stop();
     } else {
-      recognition.lang = selectedLang;
-      recognition.start();
+      recognitionRef.current.lang = selectedLang;
+      recognitionRef.current.start();
     }
   };
 

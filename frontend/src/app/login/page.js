@@ -12,8 +12,8 @@ export default function LoginPage() {
   const { loginWithEmail, loginWithGoogle } = useAuth();
 
   const [isAdminView, setIsAdminView] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('rohit@gmail.com');
+  const [password, setPassword] = useState('Rohit@1234');
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   
@@ -34,12 +34,6 @@ export default function LoginPage() {
       setPassword('Rohit@1234');
     }
   };
-
-  // Populate default mock customer details on mount
-  useEffect(() => {
-    setEmail('rohit@gmail.com');
-    setPassword('Rohit@1234');
-  }, []);
 
   const handleEmailLogin = async (e) => {
     e.preventDefault();
