@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import api from '../../utils/api';
 import { useCart } from '../../context/CartContext';
@@ -23,6 +24,7 @@ import {
 
 export default function ChatAssistant() {
   const { addToCart } = useCart();
+  const router = useRouter();
   const messagesEndRef = useRef(null);
 
   // Chat message thread
@@ -386,6 +388,29 @@ export default function ChatAssistant() {
             
             <button
               onClick={() => {
+                const filterMsg = [
+                  occasion && `Occasion: ${occasion}`,
+                  budget && `Budget under ₹${budget}`,
+                  age && `Age: ${age}`,
+                  gender && `Gender: ${gender}`,
+                  relationship && `Relationship: ${relationship}`,
+                  interests && `Interests: ${interests}`,
+                ].filter(Boolean).join(', ');
+                const msg = filterMsg
+                  ? `Recommend a gift for ${filterMsg}`
+                  : 'Recommend a gift for me';
+                setInputText(msg);
+                setTimeout(() => {
+                  document.getElementById('chat-send-btn')?.click();
+                }, 100);
+              }}
+              className="w-full py-2.5 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white text-xxs font-bold rounded-xl shadow hover:opacity-90 transition-opacity cursor-pointer flex items-center justify-center gap-1"
+            >
+              ✨ Apply Filters & Get Suggestions
+            </button>
+
+            <button
+              onClick={() => {
                 setOccasion('');
                 setBudget('');
                 setAge('');
@@ -642,6 +667,7 @@ export default function ChatAssistant() {
             />
 
             <button
+              id="chat-send-btn"
               type="submit"
               disabled={!inputText.trim()}
               className="p-3.5 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white disabled:from-zinc-200 disabled:to-zinc-200 disabled:text-zinc-400 shadow-md shadow-violet-500/10 cursor-pointer"
