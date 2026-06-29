@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://syncgift.onrender.com/api';
 
 async function request(endpoint, method = 'GET', body = null, customHeaders = {}) {
   const url = `${BASE_URL}${endpoint}`;
