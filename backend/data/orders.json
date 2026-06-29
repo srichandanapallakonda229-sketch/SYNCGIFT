@@ -1,0 +1,40 @@
+[
+  {
+    "userId": "mock_user_1782726155504",
+    "products": [
+      {
+        "productId": "prod_bday_11",
+        "name": "Wireless Earbuds Premium",
+        "price": 3499,
+        "quantity": 1,
+        "imageUrl": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=60"
+      }
+    ],
+    "totalAmount": 3577,
+    "shippingAddress": "11-18-712 warangal, kashibugga vivekananda colony, warangal, telangana - 506002",
+    "contactPhone": "8106192928",
+    "id": "ord_1782729270792b5q5r",
+    "status": "Pending",
+    "whatsappNotificationSent": false,
+    "createdAt": "2026-06-29T10:34:30.792Z"
+  },
+  {
+    "userId": "mock_user_1782733327164",
+    "products": [
+      {
+        "productId": "prod_bday_11",
+        "name": "Wireless Earbuds Premium",
+        "price": 3499,
+        "quantity": 1,
+        "imageUrl": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=60"
+      }
+    ],
+    "totalAmount": 3577,
+    "shippingAddress": "11-18-712 kashibugga warangal vivekananda colony , warangal, telangana - 506002",
+    "contactPhone": "8106192928",
+    "id": "ord_1782748036470hia2f",
+    "status": "Processing",
+    "whatsappNotificationSent": false,
+    "createdAt": "2026-06-29T15:47:16.470Z"
+  }
+]

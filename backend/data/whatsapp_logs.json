@@ -1,0 +1,16 @@
+[
+  {
+    "timestamp": "2026-06-29T10:34:30.817Z",
+    "to": "8106192928",
+    "message": "Hello! Thank you for contacting SyncGifts. We are currently busy and unable to answer your call. We will contact you within 15–20 minutes. Thank you for your patience.",
+    "status": "Simulated",
+    "error": "Twilio credentials not configured. Logged simulation."
+  },
+  {
+    "timestamp": "2026-06-29T15:47:16.499Z",
+    "to": "8106192928",
+    "message": "Hello! Thank you for contacting SyncGifts. We are currently busy and unable to answer your call. We will contact you within 15–20 minutes. Thank you for your patience.",
+    "status": "Simulated",
+    "error": "Twilio credentials not configured. Logged simulation."
+  }
+]

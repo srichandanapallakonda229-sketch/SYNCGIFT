@@ -1,0 +1,22 @@
+{
+  "shopName": "SyncGifts",
+  "owner": "Karthik",
+  "description": "SyncGifts is an AI-powered gift recommendation platform designed to help customers quickly find the perfect gift for every occasion. It offers personalized recommendations based on occasion, age, relationship, and budget, making gift shopping faster, smarter, and more enjoyable.",
+  "address": "Opposite Bus Stop, Yadagirigutta, Telangana, India",
+  "phone": "9951303523",
+  "whatsapp": "9951303523",
+  "email": "hello@syncgifts.com",
+  "businessHours": "Monday - Sunday: 10:00 AM - 9:00 PM",
+  "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.7214952093557!2d78.9441113!3d17.5921617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb6588a53e4125%3A0x6b8764024340d859!2sYadagirigutta%20Bus%20Stop!5e0!3m2!1sen!2sin!4v1700000000000",
+  "branches": [
+    "Yadagirigutta (Main Branch)",
+    "Bhongir",
+    "Warangal",
+    "Hanamkonda",
+    "Hyderabad"
+  ],
+  "whatsappSettings": {
+    "autoReplyOnNoAnswer": true,
+    "busyMessage": "Hello! Thank you for contacting SyncGifts. We are currently busy and unable to answer your call. We will contact you within 15–20 minutes. Thank you for your patience."
+  }
+}
