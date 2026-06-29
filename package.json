@@ -2,6 +2,7 @@
   "name": "syncgift-root",
   "version": "1.0.0",
   "description": "Root orchestrator for SyncGift (Frontend + Backend)",
+  "homepage": "https://syncgift.vercel.app",
   "scripts": {
     "install:backend": "npm install --prefix backend",
     "install:frontend": "npm install --prefix frontend",
